@@ -1,0 +1,18 @@
+{
+  "name": "hp-vue-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "es/index.mjs",
+  "files": [
+    "es",
+    "lib"
+  ],
+  "keywords": [
+    "hp-vue-component",
+    "vue3组件库"
+  ],
+  "author": "HP",
+  "license": "MIT",
+  "typings": "lib/index.d.ts"
+}

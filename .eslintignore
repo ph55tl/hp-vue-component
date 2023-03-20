@@ -1,0 +1,4 @@
+**.d.ts
+/packages/hp-vue-component
+dist
+node_modules
