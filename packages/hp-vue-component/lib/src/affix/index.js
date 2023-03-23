@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("./affix.vue.js"),u=require("@hp-vue-component/utils"),e=u.withInstall(t.default);exports.HpAffix=e;exports.default=e;

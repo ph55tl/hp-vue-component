@@ -1,0 +1,1 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("./src/affix/index.js"),t={install:i=>{i.use(e.HpAffix)}};exports.HpAffix=e.HpAffix;exports.default=t;
