@@ -1,6 +1,6 @@
 {
   "name": "hp-vue-component",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.mjs",
@@ -14,5 +14,9 @@
   ],
   "author": "HP",
   "license": "MIT",
-  "typings": "lib/index.d.ts"
+  "typings": "lib/index.d.ts",
+  "dependencies": {
+    "@hp-vue-component/utils": "workspace:^0.0.1",
+    "@vueuse/core": "^9.13.0"
+  }
 }
