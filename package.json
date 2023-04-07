@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:com": "pnpm run --filter ./packages/components test",
+    "test:utils": "pnpm run --filter ./packages/utils test",
+    "test": "vitest",
     "lint:script": "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
     "lint:style": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\"",
     "build": "pnpm run --filter ./packages/utils build & gulp -f packages/components/script/build/index.ts"

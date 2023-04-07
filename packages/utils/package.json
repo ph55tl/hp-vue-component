@@ -11,6 +11,7 @@
   "author": "",
   "license": "MIT",
   "scripts": {
+    "test": "vitest",
     "build": "vite build",
     "release": "release-it"
   }
