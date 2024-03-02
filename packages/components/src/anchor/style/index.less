@@ -1,0 +1,26 @@
+.hp-anchor-wrapper {
+  max-height: 100vh;
+}
+
+.hp-anchor {
+  max-height: 100vh;
+}
+
+.hp-anchor::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  content: ' ';
+  border-inline-start: 2px solid #ebeef5;
+}
+
+.hp-anchor-ink {
+  position: absolute;
+  left: 0;
+  display: none;
+  width: 2px;
+  background-color: #1677ff;
+  transition: top 0.3s ease-in-out;
+  transform: translateY(-50%);
+}

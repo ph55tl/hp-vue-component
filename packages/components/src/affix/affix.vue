@@ -1,5 +1,5 @@
 <template>
-  <div ref="root" class="hp-affix" :style="rootStyle">
+  <div ref="affixRoot" class="hp-affix" :style="rootStyle">
     <div :class="{ 'hp-affix-fixed': fixed }" :style="affixStyle">
       <slot />
     </div>
@@ -40,21 +40,21 @@ const emits = defineEmits<{
   (e: 'change', fixed: 'top' | 'bottom' | undefined): void
 }>()
 
-const root = ref<HTMLDivElement>()
+const affixRoot = ref<HTMLDivElement>()
 const fixed = ref<'top' | 'bottom' | undefined>()
 const offset = ref(0)
 
 const windowSize = useWindowSize()
 
-const rootRect = useElementBounding(root)
+const rootRect = useElementBounding(affixRoot)
 const targetRect = computed(() => {
   return useElementBounding(getHTMLElement(props.target))
 })
 
 const rootStyle = computed(() => {
   return {
-    width: fixed.value ? root.value?.style.width + 'px' : '',
-    height: fixed.value ? root.value?.style.height + 'px' : ''
+    width: fixed.value ? affixRoot.value?.style.width + 'px' : '',
+    height: fixed.value ? affixRoot.value?.style.height + 'px' : ''
   }
 })
 
@@ -66,8 +66,8 @@ const affixStyle = computed(() => {
         fixed.value === 'bottom' && props.offsetBottom
           ? offset.value + 'px'
           : '',
-      width: root.value?.style.width + 'px',
-      height: root.value?.style.height + 'px'
+      width: affixRoot.value?.style.width + 'px',
+      height: affixRoot.value?.style.height + 'px'
     }
   } else {
     return {}

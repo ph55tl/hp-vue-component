@@ -1,1 +1,1 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("./src/affix/index.js"),t={install:i=>{i.use(e.HpAffix)}};exports.HpAffix=e.HpAffix;exports.default=t;
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const i=require("./src/affix/index.js"),n=require("./src/anchor/index.js"),r={install:e=>{e.use(i.HpAffix),e.use(n.HpAnchor)}};exports.HpAffix=i.HpAffix;exports.HpAnchor=n.HpAnchor;exports.default=r;

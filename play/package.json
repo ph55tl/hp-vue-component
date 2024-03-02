@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@hp-vue-component/components": "workspace:^0.0.1",
     "hp-vue-component": "workspace:^0.0.1"
   }
 }

@@ -19,7 +19,7 @@ declare const _sfc_main: import("vue").DefineComponent<{
         target: Window | HTMLElement;
     };
     emits: (e: 'change', fixed: 'top' | 'bottom' | undefined) => void;
-    root: import("vue").Ref<HTMLDivElement | undefined>;
+    affixRoot: import("vue").Ref<HTMLDivElement | undefined>;
     fixed: import("vue").Ref<"top" | "bottom" | undefined>;
     offset: import("vue").Ref<number>;
     windowSize: {

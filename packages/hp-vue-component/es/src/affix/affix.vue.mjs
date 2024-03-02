@@ -1,4 +1,4 @@
-import { defineComponent as c, ref as n, computed as r, watchEffect as x, openBlock as B, createElementBlock as y, normalizeStyle as p, unref as v, createElementVNode as T, normalizeClass as b, renderSlot as _ } from "vue";
+import { defineComponent as c, ref as i, computed as n, watchEffect as w, openBlock as B, createElementBlock as y, normalizeStyle as r, unref as v, createElementVNode as T, normalizeClass as b, renderSlot as _ } from "vue";
 import "./style/index.css";
 import { getHTMLElement as S } from "@hp-vue-component/utils";
 import { useWindowSize as E, useElementBounding as m } from "@vueuse/core";
@@ -11,31 +11,32 @@ const z = c({ name: "HpAffix" }), L = /* @__PURE__ */ c({
   },
   emits: ["change"],
   setup(d, { emit: h }) {
-    const t = d, l = n(), e = n(), f = n(0), i = E(), u = m(l), s = r(() => m(S(t.target))), g = r(() => {
+    const t = d, f = i(), e = i(), l = i(0), p = E(), u = m(f), s = n(() => m(S(t.target))), x = n(() => {
       var o, a;
       return {
-        width: e.value ? ((o = l.value) == null ? void 0 : o.style.width) + "px" : "",
-        height: e.value ? ((a = l.value) == null ? void 0 : a.style.height) + "px" : ""
+        width: e.value ? ((o = f.value) == null ? void 0 : o.style.width) + "px" : "",
+        height: e.value ? ((a = f.value) == null ? void 0 : a.style.height) + "px" : ""
       };
-    }), w = r(() => {
+    }), g = n(() => {
       var o, a;
       return e.value ? {
-        top: e.value === "top" && t.offsetTop ? f.value + "px" : "",
-        bottom: e.value === "bottom" && t.offsetBottom ? f.value + "px" : "",
-        width: ((o = l.value) == null ? void 0 : o.style.width) + "px",
-        height: ((a = l.value) == null ? void 0 : a.style.height) + "px"
+        top: e.value === "top" && t.offsetTop ? l.value + "px" : "",
+        bottom: e.value === "bottom" && t.offsetBottom ? l.value + "px" : "",
+        width: ((o = f.value) == null ? void 0 : o.style.width) + "px",
+        height: ((a = f.value) == null ? void 0 : a.style.height) + "px"
       } : {};
     });
-    return x(() => {
-      e.value = void 0, t.target === window ? (t.offsetTop && t.offsetTop > u.top.value && (f.value = t.offsetTop, e.value = "top"), t.offsetBottom && i.height.value + t.offsetBottom < u.bottom.value && (f.value = t.offsetBottom, e.value = "bottom")) : (t.offsetTop && t.offsetTop + s.value.top.value > u.top.value && (f.value = t.offsetTop + s.value.top.value, e.value = "top"), t.offsetBottom && t.offsetBottom + s.value.bottom.value < u.bottom.value && (f.value = i.height.value - t.offsetBottom - s.value.bottom.value, e.value = "bottom")), h("change", e.value);
+    return w(() => {
+      e.value = void 0, t.target === window ? (t.offsetTop && t.offsetTop > u.top.value && (l.value = t.offsetTop, e.value = "top"), t.offsetBottom && p.height.value + t.offsetBottom < u.bottom.value && (l.value = t.offsetBottom, e.value = "bottom")) : (t.offsetTop && t.offsetTop + s.value.top.value > u.top.value && (l.value = t.offsetTop + s.value.top.value, e.value = "top"), t.offsetBottom && t.offsetBottom + s.value.bottom.value < u.bottom.value && (l.value = p.height.value - t.offsetBottom - s.value.bottom.value, e.value = "bottom")), h("change", e.value);
     }), (o, a) => (B(), y("div", {
-      ref_key: "root",
-      ref: l,
-      style: p(v(g))
+      ref_key: "affixRoot",
+      ref: f,
+      class: "hp-affix",
+      style: r(v(x))
     }, [
       T("div", {
-        class: b({ "hp-affix": e.value }),
-        style: p(v(w))
+        class: b({ "hp-affix-fixed": e.value }),
+        style: r(v(g))
       }, [
         _(o.$slots, "default")
       ], 6)

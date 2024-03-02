@@ -1,4 +1,7 @@
 .hp-affix {
+  position: relative;
+}
+.hp-affix-fixed {
   position: fixed;
   z-index: 10;
 }

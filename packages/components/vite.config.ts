@@ -2,8 +2,10 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 // @ts-ignore
 import DefineOptions from 'unplugin-vue-define-options/vite'
+
 export default defineConfig({
   test: {
     environment: 'happy-dom'
@@ -47,6 +49,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    vueJsx(),
     dts({
       entryRoot: 'src',
       outputDir: ['../hp-vue-component/es/src', '../hp-vue-component/lib/src'],

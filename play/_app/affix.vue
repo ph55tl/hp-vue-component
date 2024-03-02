@@ -49,9 +49,9 @@
             border: 1px solid;
           "
         ></div>
-        <HpAnchor :target="a" :offsetTop="10" :offsetBottom="10" :items="items">
-          <div>无数据</div>
-        </HpAnchor>
+        <HpAffix :target="a" :offsetTop="10" :offsetBottom="10">
+          <div style="width: 200px; height: 200px; background: red"></div>
+        </HpAffix>
       </div>
       <div style="height: 500px"></div>
       <div style="height: 500px"></div>
@@ -75,9 +75,9 @@
           border: 1px solid;
         "
       ></div>
-      <HpAnchor :offsetBottom="10">
-        <div>无数据</div>
-      </HpAnchor>
+      <HpAffix :offsetBottom="10">
+        <div style="width: 200px; height: 500px; background: sienna"></div>
+      </HpAffix>
     </div>
     <div style="height: 500px"></div>
     <div style="height: 500px"></div>
@@ -91,46 +91,6 @@ import { onMounted, ref } from 'vue'
 
 const container = ref()
 const a = ref()
-
-const items = [
-  {
-    key: '1',
-    title: '1',
-    href: '#1',
-    style: { color: 'red' },
-    children: [
-      {
-        key: '11',
-        title: '1-1',
-        href: '#1-1',
-        style: { color: 'blue' },
-        children: []
-      },
-      {
-        key: '12',
-        title: '1-2',
-        href: '#1-2',
-        style: { color: 'green' },
-        children: []
-      }
-    ]
-  },
-  {
-    key: '2',
-    title: '2',
-    href: '#2',
-    style: { color: 'red' },
-    children: [
-      {
-        key: '2',
-        title: '2-1',
-        href: '#2-1',
-        style: { color: 'blue' },
-        children: []
-      }
-    ]
-  }
-]
 
 onMounted(() => {
   a.value = document.getElementById('container1')

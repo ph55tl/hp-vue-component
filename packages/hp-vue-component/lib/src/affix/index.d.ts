@@ -19,7 +19,7 @@ export declare const HpAffix: import("@hp-vue-component/utils").SFCWithInstall<i
         target: Window | HTMLElement;
     };
     emits: (e: "change", fixed: "top" | "bottom" | undefined) => void;
-    root: import("vue").Ref<HTMLDivElement | undefined>;
+    affixRoot: import("vue").Ref<HTMLDivElement | undefined>;
     fixed: import("vue").Ref<"top" | "bottom" | undefined>;
     offset: import("vue").Ref<number>;
     windowSize: {
